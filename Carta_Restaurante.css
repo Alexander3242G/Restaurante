@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#contenedor-encabezado-carta{
+    width: 100%;
+    min-height: 10em;
+    padding: 0 2em 0 2em;
+    background-image: linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0.3) 35%, transparent 97%, transparent 0%);
+    background-color: #000000e0!important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2em;
+}
+
+#regresar{
+    display: flex;
+    align-items: center;
+    width: 15em;
+    column-gap: 0.5em;
+}
+#regresar span{
+    font-size: 1.2em;
+    color: white;
+}
+#regresar .icono-back{
+    font-size: 2em;
+    color: white;
+}
+#tipo-carta{
+    display: flex;
+    column-gap: 5em;
+}
+#tipo-carta #boton-carta, #tipo-carta #boton-menu{
+    color: white;
+    border: solid 2px white;
+    font-size: 1.5em;
+    padding: 0.5em 1em;
+    transition: 0.3s ease-in-out;
+}
+#tipo-carta #boton-carta:hover{
+    color: #000;
+    background-color: white;
+}
+#tipo-carta #boton-menu:hover{
+    color: #000;
+    background-color: white;
+}
+#carrito{
+    padding: 2em;
+    width: 15em;
+    display: flex;
+    column-gap: 1em;
+    justify-content: space-around;
+    border: solid 4px white;
+}
+#carrito span{
+    color: rgb(154, 154, 154);
+    font-size: 1.2em;
+}
+#encabezado-main{
+    width: 100%;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(1em,1fr));
+    justify-content: space-between;
+    column-gap: 4em;
+    align-items: center;
+    overflow-x: hidden;
+}
+#encabezado-main #titulo-encabezado-main{
+    flex: 1;
+}
+#encabezado-main #info-encabezado-main{
+    flex: 1;
+}
+#titulo-encabezado-main{
+    flex-direction: column;
+    row-gap: 1em;
+}
+#titulo{
+    font-size: 2.5em;
+    font-weight: bold;
+}
+#dias-semana{
+    font-size: 1.5em;
+    color: gray;
+    column-gap: 0.5em;
+}
+
+#info-encabezado-main{
+    font-size: 1.4em;
+}
+
+#cuerpo-main{
+    padding-top: 2em;
+}
+#contenedor-secciones{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+.seccion{
+    min-width: 100%;
+    height: 20em;
+    background-color: gray;
+}
+@media only screen and (max-width:750px){
+    #carrito{
+        display: none;
+    }
+    #contenedor-encabezado-carta{
+        min-height: 7em;
+    }
+    #tipo-carta{
+        column-gap: 2em;
+    }
+    #tipo-carta #boton-carta, #tipo-carta #boton-menu{
+        font-size: 1em;
+    }
+    #dias-semana{
+        font-size: 1.5em;
+        color: gray;
+        column-gap: 0.5em;
+    }
+}
