@@ -1,0 +1,707 @@
+/* Importar desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+:root{
+    --color_dorado_01: #CF7500;
+    --color_dorado_02: #F0A500;
+    --color_dorado_claro01: #B8860B;
+    --color_dorado_claro02: #A35709;
+    --color_marron: #4F200D;
+    --color_marron_claro: #6A492B;
+}
+/* Aplicar la fuente */
+body {
+  font-family: 'Libre Baskerville', serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+.titulo{
+    padding-bottom: 0.7em;
+}
+#main-body{
+    padding-top: 6em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 7em;
+}
+/*contenedor del video*/
+#contenedor-video{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+#contenedor-video>video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+/*Pie de página*/
+#footer-body{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #151515;
+    color: white;
+    height: 7.7em;
+    font-size: 1.1em;
+}
+#footer-body>p{
+    width: 75%;
+    line-height: 1.5;
+}
+
+#contenedor-video::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+/*contenedor del navegador*/
+#contenedor-portada{
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+/*menu del navegador*/
+#portada-navegador{
+    padding: 1em 2% 1em 1.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0.3) 35%, transparent 97%, transparent 0%);
+    background-color: #000000e0!important;
+}
+
+#portada-navegador img{
+    width: 7em;
+    height: auto;
+}
+.lista-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.lista-nav {
+    box-sizing: border-box;
+    width: 50%;
+    text-align: center;
+    animation: deslizamiento-abajo 0.4s ease-in-out;
+}
+img{
+    width: 100px;
+}
+#encabezado-restaurante{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+#portada-entrada{
+    box-sizing: border-box;
+    display: flex;
+    height: 86.4%;
+    align-items: center;
+    justify-content: center;
+}
+#texto-portada-entrada{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    text-align: center;
+}
+#texto-portada-entrada>h2{
+    margin: 1em 0;
+    line-height: 1.5;
+}
+.boton-portada{
+    border: 4px solid white;
+    border-radius: 5px;
+    padding: 1em 2em;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+.boton-portada:hover{
+    background-color: white;
+    color: black;
+}
+
+#contacto{
+    padding: 2em 0;
+}
+.informacion-contacto{
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    height: 19em;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    padding: 1.5em;
+}
+.informacion-contacto>h3{
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+.informacion-contacto>p{
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    
+}
+.informacion-contacto i{
+    margin-right: 0.7em;
+}
+
+.redes-sociales{
+    margin-top: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.redes-sociales i{
+    font-size: 2em;
+    margin: 0;
+}
+
+#sobre-nosotros{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    column-gap: 1.5em;
+}
+
+#info-sobre-nosotros{
+    box-sizing: border-box;
+    width: 62%;
+}
+#info-sobre-nosotros h2{
+    color: #B8860B;
+}
+
+#imagen-sobre-nosotros{
+    flex: 1;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    row-gap: 1.5em;
+    padding-left: 0.2em;
+}
+
+#populares{
+    padding: 2em;
+}
+
+#populares #titulo-populares{
+    display: inline;
+    margin: 0 auto;
+    position: relative;
+    color: var(--color_dorado_claro02);
+}
+#populares #titulo-populares::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 50%;
+    height: 4px;
+    transform: translateX(-50%);
+    background-color: var(--color_dorado_01);
+}
+
+/* Contenedor del slide*/
+#populares{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40em;
+    row-gap: 3em;
+}
+.contenedor-populares{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 4em;
+    cursor: pointer;
+    z-index: 5;
+}
+
+#prev {
+    left: 2%;
+    color: rgb(156, 112, 2);
+}
+
+#next {
+    right: 2%;
+    color: rgb(156, 112, 2);
+}
+a{
+    text-decoration: none;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.contenedor{
+    position: relative;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
+.cartas{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 90%;
+    width: 35%;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+.cartas label{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    font-size: 0.5em;
+    transition: transform 0.55s ease;
+}
+
+
+
+/*Estilos de las tarjetas*/
+
+.front img{
+    width: 160%;
+}
+.tarjeta{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.tarjeta .cara{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+    color: white;
+}
+
+.tarjeta .front{
+    transform: perspective(600px)  rotatey(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.tarjeta .front img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tarjeta .front .icono-info, .tarjeta .back .icono-regresar{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 4em;
+    color: white;
+}
+.tarjeta .front .precio{
+    position: absolute;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    right: 0;
+    top: 0;
+    height: 45px;
+    line-height: 45px;
+    padding-right: 20px;
+    font-size: 1.5em;
+}
+.tarjeta .front .nombre-comida, .tarjeta .front .clasificacion{
+    position: absolute;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 20px;
+}
+.tarjeta .front .nombre-comida{
+    bottom: 45px;
+}
+.tarjeta .front .clasificacion{
+    bottom: 0;
+}
+
+.tarjeta .back{
+    box-sizing: border-box;
+    padding: 5em 5em 3em 5em;
+    transform: perspective(600px) rotateY(180deg);
+    background-color: darkgoldenrod;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.tarjeta .back .enlace{
+    border-top: solid 2px white;
+    height: 35px;
+    line-height: 55px;
+}
+
+.tarjeta .back .enlace{
+    text-decoration: none;
+    color: white;
+}
+
+.tarjeta .back h2{
+    padding-top: 10px;
+    font-size: 4em;
+}
+
+.tarjeta .back p{
+    letter-spacing: 1px;
+    font-size: 2em;
+}
+
+
+.front.show{
+    transform: perspective(600px) rotateY(180deg);
+}
+.back.show{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
+@media only screen and (min-width:581px){
+    h2{
+        font-size: 3em;
+    }
+    .lista-nav{
+        flex: 1;
+        padding: 0 2% 0 2.2%;
+    }
+    .lista-nav>nav{
+        display: flex;
+        justify-content: space-around;
+    }
+    .lista-nav nav ul{
+        flex: 1;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+    .lista-nav nav ul li{
+        margin: 0 2%;
+    }
+    #cont-reservar{
+        text-align: end;
+    }
+    #cont-reservar>a{
+        border: 2px solid white;
+        padding: 1em;
+        transition: 0.5s ease-in-out;
+    }
+    #cont-reservar>a:hover{
+        background-color: white;
+        color: black;
+    }
+    #texto-portada-entrada>h2{
+        margin-bottom: 2em;
+        font-size: 3em;
+    }
+    .boton-portada{
+        font-size: 1.2em;
+    }
+    #info-sobre-nosotros{
+        line-height: 1.7;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #info-sobre-nosotros>p{
+        font-size: 1.7em;
+    }
+    /*section de sobre nosotros*/
+#sobre-nosotros{
+    padding: 0 3%;
+    align-items: stretch;
+}
+#info-sobre-nosotros{
+    flex: 1;
+}
+
+#img01{
+    align-self: flex-end;
+}
+#img01 img{
+    width: 25em;
+}
+#img02 img{
+    width: 25em;
+}
+
+}
+
+@media only screen and (max-width: 580px){
+    #main-body{
+        row-gap: 1em;
+    }
+    h2{
+        font-size: 1.5em;
+    }
+#main-body{
+    padding-top: 2em;
+}
+/*Contenedor del navegador*/
+#contenedor-portada{
+    height: 31em;
+}
+/*La parte del menu deplegable y la portada -------------------------------*/
+
+/*contiene el video y el navegador*/
+#encabezado-restaurante{
+    height: 31em;
+}
+
+/*contenedor del video*/
+#contenedor-video{
+    height: 31em;
+}
+#contenedor-video>video{
+    height: 31em;
+}
+
+/*menu del navegador movil*/
+.menu-nav {
+    cursor: pointer;
+    display: block;
+}
+.menu-nav span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+.lista-nav {
+    box-sizing: border-box;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 25em;
+    text-align: center;
+    position: absolute;
+    top: 5.9em;
+    left: 0px;
+    background-color: #000000;
+    padding: 10px;
+    animation: deslizamiento-abajo 0.4s ease-in-out;
+}
+
+.lista-nav.show{
+    display: block;
+}
+.lista-nav>nav{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.lista-nav>nav>ul{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.lista-nav>nav>ul>li{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.lista-nav>nav>ul>li>a{
+    width: 100%;
+    padding: 1em;
+}
+#cont-reservar{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cont-reservar a{
+    width: 100%;
+    padding: 1em;
+}
+/*entrada de la portada*/
+#portada-navegador{
+    padding: 0.5em 2em 0.5em 1em;
+}
+#portada-navegador img{
+    width: 8em;
+    height: auto;
+}
+#portada-entrada{
+    height: 80.5%;
+}
+/*section de sobre nosotros*/
+#sobre-nosotros{
+    padding: 0 0.5em 0 1em;
+    align-items: center;
+}
+
+
+#imagen-sobre-nosotros #img02{
+    max-width: 100%;
+    height: auto;
+}
+#img01 img{
+    width: 90%;
+}
+#img02 img{
+    width: 90%;
+}
+
+#populares{
+    padding: 2em 0.5em;
+    height: 19em;
+    row-gap: 2em;
+}
+.contenedor{
+    width: 100%;
+}
+
+.cartas{
+    width: 40%;
+}
+
+#prev, #next {
+    font-size: 1.5em;
+}
+
+#prev{
+    top: 100%;
+    bottom: 0;
+    left: 35%;
+}
+
+#next{
+    top: 100%;
+    bottom: 0;
+    right: 35%;
+}
+
+.tarjeta .front .icono-info, .tarjeta .back .icono-regresar{
+    font-size: 2em;
+}
+
+.tarjeta .front .precio{
+    height: 2em;
+    line-height: 2em;
+    padding-right: 0.7em;
+    background-color: #0000007e;
+    box-shadow: -5px 0px 10px #0000007e;
+    margin-top: 0.5em;
+}
+
+.tarjeta .back{
+    padding: 1em 1em 1em 1em;
+}
+.tarjeta .back h2{
+    padding: 1.5em 0 0 0;
+    display: inline-block;
+    font-size: 1.5em;
+    justify-self: flex-end;
+}
+.tarjeta .back p{
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+.tarjeta .back .enlace{
+    height: 3em;
+    line-height: 3em;
+}
+
+
+.tarjeta .front .nombre-comida, .tarjeta .front .clasificacion{
+    height: 2em;
+    line-height: 2em;
+    padding: 0 0.8em;
+    
+    background-color: #0000007e;
+    box-shadow: 0px 5px 10px #0000007e;
+}
+.tarjeta .front .nombre-comida{
+    bottom: 2.4em;
+    width: initial;
+}
+.tarjeta .front .clasificacion{
+    bottom: 0;
+    width: initial;
+}
+}
+/*lista del menu del navegador*/
+@keyframes deslizamiento-abajo {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+@media only screen and (max-width: 380px){
+    .informacion-contacto>p{
+        font-size: 1em;
+        margin-bottom: 1.4em;
+    }
+}
+
+
