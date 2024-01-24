@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Isabel</title>
+    <link rel="stylesheet" href="Estilos.css">
+    <script src="https://kit.fontawesome.com/0db69381a2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div id="encabezado-restaurante">
+            <div id="contenedor-video">
+                <video src="Multimedia/Video/Portada-video.mp4" autoplay loop muted></video>
+            </div>
+            <div id="contenedor-portada">
+                <div id="portada-navegador">
+                    <a href="#"><img src="Multimedia/Img/Logos/Logo-blanco.png" alt="Logo-restaurante"></a>
+                    <div class="menu-nav" id="menu-movil">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="lista-nav">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Inicio</a></li>
+                                <li><a href="#">Entradas</a></li>
+                                <li><a href="#">Sopas</a></li>
+                                <li><a href="#">Segundos</a></li>
+                            </ul>
+                            <div id="cont-reservar">
+                                <a href="#" id="boton-reservar">Reservar</a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div id="portada-entrada">
+                    <div id="texto-portada-entrada">
+                        <h2>Un Rincón de Sabor y Encanto</h2>
+                        <a href="Carta_Restaurante.html" class="boton-portada"> || Mostrar Carta</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+    <main id="main-body">
+        <section id="sobre-nosotros">
+            <div id="info-sobre-nosotros">
+                <h2 class="titulo">Sobre nosotros</h2>
+                <p>Somos un restaurante que vinimos desde abajo, con ayuda de nuestra familia pudimos salir adelante. Con la rica sazón de nuestra chef te enamorarás de nuestros diversos platos que son preparados con todo el amor del mundo.</p>
+            </div>
+            <div id="imagen-sobre-nosotros">
+                <div id="img01">
+                    <img src="Multimedia/Img/Nosotros/nosotros2.webp" alt="imagen01">
+                </div>
+                <div id="img02">
+                    <img src="Multimedia/Img/Nosotros/nosotros4.jpg" alt="imagen02">
+                </div>
+            </div>
+        </section>
+        <section id="populares">
+            <h2 id="titulo-populares" class="titulo">Comidas Populares</h2>
+            <div class="contenedor-populares">
+                <div class="contenedor">
+                    <div id="prev" onclick="cambiarSeleccion('slider-popular',-1)">&#10094;</div>
+                        <div id="next" onclick="cambiarSeleccion('slider-popular',1)">&#10095;</div>
+            
+                        <input type="radio" name="slider-popular" id="s1" data-index="0" checked>
+                        <input type="radio" name="slider-popular" id="s2" data-index="1">
+                        <input type="radio" name="slider-popular" id="s3"data-index="2">
+                        <input type="radio" name="slider-popular" id="s4" data-index="3">
+                        <input type="radio" name="slider-popular" id="s5" data-index="4">
+                        <input type="radio" name="slider-popular" id="s6" data-index="5">
+                        <input type="radio" name="slider-popular" id="s7" data-index="6">
+                        <input type="radio" name="slider-popular" id="s8" data-index="7">
+                        <input type="radio" name="slider-popular" id="s9" data-index="8">
+                        <input type="radio" name="slider-popular" id="s10" data-index="9">
+                    
+                    <div class="cartas">
+                        <label for="s1" id="slide1">
+                            <div class="tarjeta">
+                                <div class="cara front">
+                                    <img src="Multimedia/Img/Comidas/postres1.webp" alt="gaaa">
+                                    <i class="fa-solid fa-circle-info icono-info"></i>
+                                    <span class="precio">$ 400</span>
+                                    <h3 class="nombre-comida">Pasta</h3>
+                                    <h2 class="clasificacion">Clasifiacion</h2>
+                                </div>
+                                <div class="cara back">
+                                    <i class="fa-solid fa-circle-chevron-left icono-regresar"></i>
+                                        <h2>info</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad commodi ?</p>
+                                        <a href="#" class="enlace">enlace</a>
+                                </div>
+                            </div>
+                        </label>
+                        <label for="s2" id="slide2">
+                            <div class="tarjeta">
+                                <div class="cara front">
+                                    <img src="Multimedia/Img/Comidas/ensalada.webp" alt="gaaa">
+                                    <i class="fa-solid fa-circle-info icono-info"></i>
+                                    <span class="precio">$ 400</span>
+                                    <h3 class="nombre-comida">Pasta</h3>
+                                    <h2 class="clasificacion">Clasifiacion</h2>
+                                </div>
+                                <div class="cara back">
+                                    <i class="fa-solid fa-circle-chevron-left icono-regresar"></i>
+                                        <h2>info</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad commodi ?</p>
+                                        <a href="#" class="enlace">enlace</a>
+                                </div>
+                            </div>
+                        </label>
+                        <label for="s3" id="slide3">
+                            <div class="tarjeta">
+                                <div class="cara front">
+                                    <img src="Multimedia/Img/Comidas/postres3.webp" alt="gaaa">
+                                    <i class="fa-solid fa-circle-info icono-info"></i>
+                                    <span class="precio">$ 400</span>
+                                    <h3 class="nombre-comida">Pasta</h3>
+                                    <h2 class="clasificacion">Clasifiacion</h2>
+                                </div>
+                                <div class="cara back">
+                                    <i class="fa-solid fa-circle-chevron-left icono-regresar"></i>
+                                        <h2>info</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad commodi ?</p>
+                                        <a href="#" class="enlace">enlace</a>
+                                </div>
+                            </div>
+                        </label>
+                        <label for="s4" id="slide4">
+                            <div class="tarjeta">
+                                <div class="cara front">
+                                    <img src="Multimedia/Img/Comidas/pizza2.webp" alt="gaaa">
+                                    <i class="fa-solid fa-circle-info icono-info"></i>
+                                    <span class="precio">$ 400</span>
+                                    <h3 class="nombre-comida">Pasta</h3>
+                                    <h2 class="clasificacion">Clasifiacion</h2>
+                                </div>
+                                <div class="cara back">
+                                    <i class="fa-solid fa-circle-chevron-left icono-regresar"></i>
+                                        <h2>info</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad commodi ?</p>
+                                        <a href="#" class="enlace">enlace</a>
+                                </div>
+                            </div>
+                        </label>
+                        <label for="s5" id="slide5">
+                            <div class="tarjeta">
+                                <div class="cara front">
+                                    <img src="Multimedia/Img/Comidas/pasta3.webp" alt="gaaa">
+                                    <i class="fa-solid fa-circle-info icono-info"></i>
+                                    <span class="precio">$ 400</span>
+                                    <h3 class="nombre-comida">Pasta</h3>
+                                    <h2 class="clasificacion">Clasifiacion</h2>
+                                </div>
+                                <div class="cara back">
+                                    <i class="fa-solid fa-circle-chevron-left icono-regresar"></i>
+                                        <h2>info</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad commodi ?</p>
+                                        <a href="#" class="enlace">enlace</a>
+                                </div>
+                            </div>
+                        </label>
+                        <label for="s6" id="slide6">
+                            <div class="tarjeta">
+                                <div class="cara front">
+                                    <img src="Multimedia/Img/Comidas/postres1.webp" alt="gaaa">
+                                    <i class="fa-solid fa-circle-info icono-info"></i>
+                                    <span class="precio">$ 400</span>
+                                    <h3 class="nombre-comida">Pasta</h3>
+                                    <h2 class="clasificacion">Clasifiacion</h2>
+                                </div>
+                                <div class="cara back">
+                                    <i class="fa-solid fa-circle-chevron-left icono-regresar"></i>
+                                        <h2>info</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad commodi ?</p>
+                                        <a href="#" class="enlace">enlace</a>
+                                </div>
+                            </div>
+                        </label>
+                        <label for="s7" id="slide7">
+                            <div class="tarjeta">
+                                <div class="cara front">
+                                    <img src="Multimedia/Img/Comidas/pizza1.webp" alt="gaaa">
+                                    <i class="fa-solid fa-circle-info icono-info"></i>
+                                    <span class="precio">$ 400</span>
+                                    <h3 class="nombre-comida">Pasta</h3>
+                                    <h2 class="clasificacion">Clasifiacion</h2>
+                                </div>
+                                <div class="cara back">
+                                    <i class="fa-solid fa-circle-chevron-left icono-regresar"></i>
+                                        <h2>info</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad commodi ?</p>
+                                        <a href="#" class="enlace">enlace</a>
+                                </div>
+                            </div>
+                        </label>
+                        <label for="s8" id="slide8">
+                            <div class="tarjeta">
+                                <div class="cara front">
+                                    <img src="Multimedia/Img/Comidas/postres2.webp" alt="gaaa">
+                                    <i class="fa-solid fa-circle-info icono-info"></i>
+                                    <span class="precio">$ 400</span>
+                                    <h3 class="nombre-comida">Pasta</h3>
+                                    <h2 class="clasificacion">Clasifiacion</h2>
+                                </div>
+                                <div class="cara back">
+                                    <i class="fa-solid fa-circle-chevron-left icono-regresar"></i>
+                                        <h2>info</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad commodi ?</p>
+                                        <a href="#" class="enlace">enlace</a>
+                                </div>
+                            </div>
+                        </label>
+                        <label for="s9" id="slide9">
+                            <div class="tarjeta">
+                                <div class="cara front">
+                                    <img src="Multimedia/Img/Comidas/pizza3.webp" alt="gaaa">
+                                    <i class="fa-solid fa-circle-info icono-info"></i>
+                                    <span class="precio">$ 400</span>
+                                    <h3 class="nombre-comida">Pasta</h3>
+                                    <h2 class="clasificacion">Clasifiacion</h2>
+                                </div>
+                                <div class="cara back">
+                                    <i class="fa-solid fa-circle-chevron-left icono-regresar"></i>
+                                        <h2>info</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad commodi ?</p>
+                                        <a href="#" class="enlace">enlace</a>
+                                </div>
+                            </div>
+                        </label>
+                        <label for="s10" id="slide10">
+                            <div class="tarjeta">
+                                <div class="cara front">
+                                    <img src="Multimedia/Img/Comidas/pasta3.webp" alt="gaaa">
+                                    <i class="fa-solid fa-circle-info icono-info"></i>
+                                    <span class="precio">$ 400</span>
+                                    <h3 class="nombre-comida">Pasta</h3>
+                                    <h2 class="clasificacion">Clasifiacion</h2>
+                                </div>
+                                <div class="cara back">
+                                    <i class="fa-solid fa-circle-chevron-left icono-regresar"></i>
+                                        <h2>info</h2>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ad commodi ?</p>
+                                        <a href="#" class="enlace">enlace</a>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contacto">
+            <div class="informacion-contacto">
+                <h3>Contactanos</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Javier Perez de Cuellar</p>
+                <p><i class="fas fa-envelope"></i> vilalivias@gmail.com</p>
+                <p><i class="fas fa-phone-alt"></i>+51 918996664</p>
+                <div class="redes-sociales">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-twitter-square"></i>
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer-body">
+        <p>Todos los derechos reservados &copy; 2024 Restaurante El Rincón Livias, desarrollado por Vila Livias Gian Pool Alexander :D</p>
+    </footer>
+    <script src="Restaurante.js"></script>
+</body>
+</html>
