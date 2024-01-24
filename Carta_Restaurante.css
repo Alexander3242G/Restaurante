@@ -191,7 +191,6 @@ body{
 
 .tarjeta .front{
     transform: perspective(600px)  rotatey(0deg);
-    box-shadow: 0 5px 10px #000;
 }
 
 .tarjeta .front img{
@@ -245,7 +244,6 @@ body{
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    box-shadow: 0 5px 10px #000;
 }
 
 .tarjeta .back .enlace{
@@ -364,7 +362,6 @@ body{
         line-height: 2em;
         padding-right: 0.7em;
         background-color: #0000007e;
-        box-shadow: -5px 0px 10px #0000007e;
     }
     
     .tarjeta .back{
@@ -390,7 +387,6 @@ body{
         line-height: 2em;
         padding: 0 0.8em;
         background-color: #0000007e;
-        box-shadow: 0px 5px 10px #0000007e;
     }
     .tarjeta .front .nombre-comida{
         bottom: 2.4em;
