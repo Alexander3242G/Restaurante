@@ -1,0 +1,403 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+#contenedor-encabezado-carta{
+    width: 100%;
+    min-height: 10em;
+    padding: 0 2em 0 2em;
+    background-image: linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.4) 10%, rgba(0,0,0,0.3) 35%, transparent 97%, transparent 0%);
+    background-color: #000000e0!important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 2em;
+}
+
+#regresar{
+    display: flex;
+    align-items: center;
+    width: 15em;
+    column-gap: 0.5em;
+}
+#regresar a{
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+}
+#regresar .icono-back{
+    font-size: 2em;
+    color: white;
+}
+#tipo-carta{
+    display: flex;
+    column-gap: 5em;
+}
+#tipo-carta #boton-carta, #tipo-carta #boton-menu{
+    color: white;
+    border: solid 2px white;
+    font-size: 1.5em;
+    padding: 0.5em 1em;
+    transition: 0.3s ease-in-out;
+}
+#tipo-carta #boton-carta:hover{
+    color: #000;
+    background-color: white;
+}
+#tipo-carta #boton-menu:hover{
+    color: #000;
+    background-color: white;
+}
+#carrito{
+    padding: 2em;
+    width: 15em;
+    display: flex;
+    column-gap: 1em;
+    justify-content: space-around;
+    border: solid 4px white;
+}
+#carrito span{
+    color: rgb(154, 154, 154);
+    font-size: 1.2em;
+}
+#encabezado-main{
+    width: 100%;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(1em,1fr));
+    justify-content: space-between;
+    column-gap: 4em;
+    align-items: center;
+    overflow-x: hidden;
+}
+#encabezado-main #titulo-encabezado-main{
+    flex: 1;
+    padding-left: 3em;
+}
+#encabezado-main #info-encabezado-main{
+    flex: 1;
+}
+#titulo-encabezado-main{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+#titulo{
+    font-size: 2.5em;
+    font-weight: bold;
+}
+#dias-semana{
+    font-size: 1.5em;
+    color: gray;
+    column-gap: 0.5em;
+}
+
+#dias-semana span{
+    padding: 0 0.4em 0 0;
+}
+
+#info-encabezado-main{
+    font-size: 1.4em;
+}
+
+#cuerpo-main{
+    padding-top: 2em;
+}
+#contenedor-secciones-dias{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+.seccion{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    height: 18em;
+    border: solid 2px gray;
+    padding: 1em 0 0 0;
+    overflow-x: hidden;
+}
+
+.slider-principal{
+    max-width: 100%;
+    height: 90%;
+    flex-wrap: nowrap;
+    display: flex;
+    column-gap: 2em;
+    overflow-x: scroll;
+    padding-bottom: 1em;
+    transform: translateX(1em);
+}
+
+.slider-menu{
+    min-width: 150%;
+    height: 100%;
+    display: flex;
+    column-gap: 2em;
+}
+
+.titulo-seccion{
+    padding-left: 1.5em;
+    font-weight: bold;
+    position: relative;
+}
+.titulo-seccion::before{
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0.7em;
+    width: 0.3em;
+    height: 100%;
+    border-radius: 1em;
+    background-color: darkgoldenrod;
+}
+
+
+.comida-entrada, .comida-segundo, .comida-bebida{
+    width: 100%;
+    height: 100%;
+}
+
+/*Estilos de las tarjetas*/
+
+.front img{
+    width: 160%;
+}
+.tarjeta{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.tarjeta .cara{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+    color: white;
+}
+
+.tarjeta .front{
+    transform: perspective(600px)  rotatey(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.tarjeta .front img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tarjeta .front .icono-info, .tarjeta .back .icono-regresar{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 2em;
+    color: white;
+}
+.tarjeta .front .precio{
+    position: absolute;
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    right: 0;
+    top: 0;
+    height: 45px;
+    line-height: 45px;
+    padding-right: 20px;
+    font-size: 1.5em;
+}
+.tarjeta .front .nombre-comida, .tarjeta .front .clasificacion{
+    position: absolute;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 20px;
+}
+.tarjeta .front .nombre-comida{
+    bottom: 45px;
+}
+.tarjeta .front .clasificacion{
+    bottom: 0;
+}
+
+.tarjeta .back{
+    box-sizing: border-box;
+    padding: 5em 5em 3em 5em;
+    transform: perspective(600px) rotateY(180deg);
+    background-color: darkgoldenrod;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.tarjeta .back .enlace{
+    border-top: solid 2px white;
+    height: 35px;
+    line-height: 55px;
+}
+
+.tarjeta .back .enlace{
+    text-decoration: none;
+    color: white;
+}
+
+.tarjeta .back h2{
+    padding-top: 10px;
+    font-size: 4em;
+}
+
+.tarjeta .back p{
+    letter-spacing: 1px;
+    font-size: 2em;
+}
+
+
+.front.show{
+    transform: perspective(600px) rotateY(180deg);
+}
+.back.show{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+@media only screen and (max-width:750px){
+    #encabezado-main #info-encabezado-main{
+        font-size: 1.2em;
+        text-align: center;
+    }
+    #cuerpo-main{
+        padding: 0;
+    }
+    #carrito{
+        display: none;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    #contenedor-encabezado-carta{
+        min-height: 7em;
+    }
+    #tipo-carta{
+        column-gap: 2em;
+    }
+    #tipo-carta #boton-carta, #tipo-carta #boton-menu{
+        font-size: 1em;
+    }
+    #dias-semana{
+        font-size: 1.5em;
+        color: gray;
+        column-gap: 0.5em;
+    }
+    #encabezado-main{
+        min-height: 15em;
+    }
+    #encabezado-main #titulo-encabezado-main{
+        padding-left: 0;
+    }
+    .seccion{
+        row-gap: 1em;
+        max-width: 100%;
+        height: 18em;
+        border: solid 2px gray;
+    }
+    
+    .slider-principal{
+        max-width: 100%;
+        height: 90%;
+        flex-wrap: nowrap;
+        display: flex;
+        overflow-x: scroll;
+        padding-bottom: 1em;
+        column-gap: 0;
+    }
+    
+    .slider-menu{
+        box-sizing: content-box;
+        min-width: 180%;
+        height: 100%;
+        display: flex;
+        column-gap: 2em;
+        padding: 0 2em 0 1em;
+    }
+    
+    .titulo-seccion{
+        padding-left: 1.5em;
+        font-weight: bold;
+        position: relative;
+    }
+    .titulo-seccion::before{
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0.7em;
+        width: 0.3em;
+        height: 100%;
+        border-radius: 1em;
+        background-color: darkgoldenrod;
+    }
+    
+    /*TARJETAS*/
+    .tarjeta .front .icono-info, .tarjeta .back .icono-regresar{
+        font-size: 2em;
+    }
+    
+    .tarjeta .front .precio{
+        height: 2em;
+        line-height: 2em;
+        padding-right: 0.7em;
+        background-color: #0000007e;
+        box-shadow: -5px 0px 10px #0000007e;
+    }
+    
+    .tarjeta .back{
+        padding: 1em 1em 1em 1em;
+    }
+    .tarjeta .back h2{
+        padding: 1.5em 0 0 0;
+        display: inline-block;
+        font-size: 1.5em;
+        justify-self: flex-end;
+    }
+    .tarjeta .back p{
+        font-size: 1em;
+        letter-spacing: 0.1em;
+    }
+    .tarjeta .back .enlace{
+        height: 2em;
+        line-height: 3em;
+    }
+    
+    .tarjeta .front .nombre-comida, .tarjeta .front .clasificacion{
+        height: 2em;
+        line-height: 2em;
+        padding: 0 0.8em;
+        background-color: #0000007e;
+        box-shadow: 0px 5px 10px #0000007e;
+    }
+    .tarjeta .front .nombre-comida{
+        bottom: 2.4em;
+        width: initial;
+    }
+    .tarjeta .front .clasificacion{
+        bottom: 0;
+        width: initial;
+    }
+}
